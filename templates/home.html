@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clientify</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<section>
+    <h2>Our Projects</h2>
+    <div class="projects">
+        {% for project in projects %}
+        <div class="project-card">
+            <img src="{{ project.image.url }}">
+            <h3>{{ project.name }}</h3>
+            <p>{{ project.description }}</p>
+            <button>Read More</button>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section>
+    <h2>Happy Clients</h2>
+    <div class="clients">
+        {% for client in clients %}
+        <div class="client-card">
+            <img src="{{ client.image.url }}">
+            <p>{{ client.description }}</p>
+            <strong>{{ client.name }}</strong><br>
+            <small>{{ client.designation }}</small>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section>
+    <h2>Contact Us</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <input name="full_name" placeholder="Full Name">
+        <input name="email" placeholder="Email">
+        <input name="mobile" placeholder="Mobile">
+        <input name="city" placeholder="City">
+        <button name="contact_submit">Submit</button>
+    </form>
+</section>
+
+<section>
+    <h2>Newsletter</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="email" name="email" placeholder="Enter Email">
+        <button name="subscribe_submit">Subscribe</button>
+    </form>
+</section>
+
+</body>
+</html>
