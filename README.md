@@ -20,6 +20,7 @@ It showcases projects, happy clients, contact forms, and newsletter subscription
 
 1. Clone the repository:
 
+```bash
 git clone https://github.com/username/Clientify.git
 cd Clientify
 
