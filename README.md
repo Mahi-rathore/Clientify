@@ -20,14 +20,13 @@ It showcases projects, happy clients, contact forms, and newsletter subscription
 
 1. Clone the repository:
 
-```bash
-git clone https://github.com/username/Clientify.git
-cd Clientify
-
+  ''' bash
+   git clone https://github.com/username/Clientify.git
+   cd Clientify 
 2. Create a virtual environment
-  python -m venv venv
- venv\Scripts\activate  # Windows
- source venv/bin/activate  # Linux/Mac
+   python -m venv venv
+  venv\Scripts\activate  # Windows
+  source venv/bin/activate  # Linux/Mac
 
 3. Install dependencies:
    pip install -r requirements.txt
